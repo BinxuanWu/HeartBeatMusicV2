@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/HeartBeatMusicWebV2/static/css/main.d4eb3053.css",
+    "main.js": "/HeartBeatMusicWebV2/static/js/main.7aab43b5.js",
+    "static/js/787.92dade40.chunk.js": "/HeartBeatMusicWebV2/static/js/787.92dade40.chunk.js",
+    "static/media/logo.png": "/HeartBeatMusicWebV2/static/media/logo.5181607b9da913106c02.png",
+    "index.html": "/HeartBeatMusicWebV2/index.html",
+    "main.d4eb3053.css.map": "/HeartBeatMusicWebV2/static/css/main.d4eb3053.css.map",
+    "main.7aab43b5.js.map": "/HeartBeatMusicWebV2/static/js/main.7aab43b5.js.map",
+    "787.92dade40.chunk.js.map": "/HeartBeatMusicWebV2/static/js/787.92dade40.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4eb3053.css",
+    "static/js/main.7aab43b5.js"
+  ]
+}
