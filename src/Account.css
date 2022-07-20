@@ -1,0 +1,151 @@
+.account-body {
+    background-color: #fffafa;
+    height: 130vh;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.account-info-container {
+    margin-top: 40px;
+    display: flex;
+}
+
+.headphoto {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin: 20px;
+}
+
+.text-info-container {
+    float: left;
+    width: 670px;
+}
+
+.name-container{
+    height:40px;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.name-text{
+    
+    float: left;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.tab-box {
+    height: 41px;
+    margin-bottom: 40px;
+    padding-left: 0;
+}
+
+.fst {
+    padding-left: 0 !important;
+    border-left: none !important;
+}
+
+.count{
+    display: block;
+    margin-top: -4px;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer
+}
+
+.tab-box li {
+    float:left;
+    padding: 0 40px 0 20px;
+    border-left: 1px solid #ddd;
+}
+
+.tab-box li>span {
+    display: block;
+    text-indent: 2px;
+    cursor: pointer;
+}
+
+.introduction {
+
+    float:left;
+    margin-bottom: 5px;
+    line-height: 21px;
+    color: #666;
+}
+
+.favourite-container {
+    float: left;
+    width: 100%;
+}
+
+.text-fav{
+    float: left;
+    padding: 5px 30px;
+    font-weight: 600;
+    color: #cd5c5c
+}
+
+.songs-container {
+    border: 1px solid #e2e2e2;
+    border-top: 2px solid #c20c0c;
+}
+
+.song {
+    overflow:hidden;
+}
+
+.song-image {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+.song-info {
+    text-align: left;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-top: 10px;
+    width: 480px;
+}
+
+.txt {
+    
+    position: relative;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+
+.song-name {
+    color: #333;
+    font-weight: bold;
+}
+
+.song-art {
+    color: #aeaeae;
+}
+
+.song-detail {
+    text-align: right;
+    float: right;
+    position: relative;
+    padding-left: 15px;
+    padding-top: 10px;
+
+}
+
+.song-time {
+    color:#666;
+    margin-left: 100px;
+    padding-top: 10px;
+    float:left
+}
+
+.song-comment {
+    color: #555;
+    float:right;
+    padding-top: 10px;
+}

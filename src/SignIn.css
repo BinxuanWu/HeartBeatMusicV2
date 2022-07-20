@@ -1,0 +1,20 @@
+.sign-body {
+    background-color: #fffafa;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 80vh;
+}
+
+.signin-container{
+    margin-top: 5%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.signup-hint {
+    font-size: 17px;
+    color: rgb(119, 119, 119);
+}
+
+.signup-hint:hover {
+    color: skyblue;
+}

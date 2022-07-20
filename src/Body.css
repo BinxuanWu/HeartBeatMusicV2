@@ -1,0 +1,54 @@
+.body {
+    background-color: #fffafa;
+    height:fit-content;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 900px;
+}
+
+.slideshow-container {
+    width: 900px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.slide-image {
+    height:300px;
+    background-size: cover;
+}
+
+hr {
+    border: 1px solid rgb(228, 227, 227);
+}
+
+ol, ul {
+    list-style:none
+}
+
+
+
+.react-tabs__tab {
+    padding: 10px 50px 10px 50px !important;
+    color: #555555;
+}
+
+.card-container {
+    background-color: red;
+    color:#fa8072;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+
+.card_img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.card-title {
+    font-size: large;
+    font-weight: bold;
+}
+.card-text {
+    font-size: small;
+    color:#888888;
+}

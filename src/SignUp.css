@@ -1,0 +1,21 @@
+.sign-body {
+    background-color: #fffafa;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 80vh;
+}
+
+.signup-container{
+    margin-top: 5%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.input-box {
+    padding-bottom: 0;
+}
+
+.password-hint {
+    color:salmon !important;
+    font-size: small;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif   
+}
