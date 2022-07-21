@@ -40,6 +40,9 @@
 .header_icon {
     padding: 20px;    
 }
+.dropdown-item{
+    width: 150px !important;
+}
 
 .translate {
     margin-right: 30px;
