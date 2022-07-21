@@ -78,7 +78,7 @@ function App() {
         <Route path="/search"
           element={<>
           <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
-          <Search/>
+          <Search setPlayingSong={setPlayingSong}/>
           <Footer playingSong={playingSong}/></>
           }/>
 

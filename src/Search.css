@@ -5,32 +5,11 @@
     margin-right: 10%;
 
 }
-.serch-navs {
-    margin-top: 30px;
-}
-.search-nav-sel {
-    background-color: #f08080;
-}
 
-.search-nav-sel:hover {
-    background-color: #f9aeae;
-}
+.search-bar {
+    background-color: rgb(247, 173, 173) !important;
+    color : #222222;
 
-.search-nav-link-sel {
-    color:white;
-}
-
-.search-nav-link-sel:hover {
-    color:#f06060;
-    border:none
-}
-
-.search-nav-link {
-    color:red;
-}
-
-.search-nav-link:hover {
-    color:pink;
 }
 
 
@@ -101,3 +80,108 @@
     float:right;
     padding-top: 10px;
 }
+
+
+
+
+.MuiTabs-flexContainer {
+    color:#333333;
+  }
+  
+.MuiTabs-indicator {
+    background-color: red !important;
+}
+.MuiButtonBase-root {
+    font-weight: 600 !important;
+    font-size: medium !important;
+}
+.MuiBox-root {
+    padding: 3px 0px 24px 0px !important;
+}
+.songlist {
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.songlist_header {
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(0,0,0,.01);
+    color: #333;
+}
+
+.songlist_list {
+    padding-left: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.songlist_item {
+    clear: both;
+    font-size: 0px;
+    overflow: hidden;
+}
+.songlist_item--even {
+    background-color: rgba(0,0,0,.05);
+}
+
+.songlist_header, .songlist_item {
+    position: relative;
+    padding-left: 46px;
+    padding-right: 95px;
+    margin-bottom: 0;
+}
+
+.songlist_img{
+    position: absolute;
+    top:7px;
+    left: 40px;
+    height: 56px;
+}
+
+.songlist_header_name, .songlist_songname {
+    float: left;
+    width: 40%;
+    position: relative;
+    white-space: normal;
+}
+
+.songlist_album, .songlist_artist, .songlist_number, .songlist_other, .songlist_songname, .songlist_time {
+    line-height: 70px;
+    height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.songlist_album, .songlist_artist, .songlist_header_album, .songlist_header_author {
+    float: left;
+    padding-left: 15px;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.songlist_header_time, .songlist_time {
+    position: absolute;
+    top: 0;
+    right: 38px;
+    width: 50px;
+}
+
+.songlist_time {
+    color: #999;
+}
+
+.songlist_songname {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.songlist_album, .songlist_artist, .songlist_other, .songlist_time{
+    font-size: 14px;
+}
+
+.songlist_album, .songlist_artist {
+    color:#666666;
+}
+
