@@ -125,7 +125,7 @@ function Search({setPlayingSong}) {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                <div className={styles.songlist}>
+                <div className="songlist">
                         
                         <ul className="songlist_header">
                             <li className='songlist_header_name'>{t('Song')}</li>
@@ -222,7 +222,7 @@ function Search({setPlayingSong}) {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={3} dir={theme.direction}>
-                <div className={styles.songlist}>
+                <div className="songlist">
                         
                         <ul className="songlist_header">
                             <li className='songlist_header_name'>{t("Album")}</li>
