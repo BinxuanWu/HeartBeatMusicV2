@@ -7,6 +7,8 @@ import 'react-slideshow-image/dist/styles.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import {Container, Row, Col, Card} from 'react-bootstrap'
+import RefreshIcon from '@mui/icons-material/Refresh';
+import {IconButton } from '@mui/material';
 import { duration } from '@mui/material';
 
 const slideImages = [
@@ -33,7 +35,7 @@ const slideImages = [
 
 
 const Body = ({setPlayingSong}) => {
-
+  const [like,setLike] = React.useState(rock)
 
   return (
     <div className='body'>
@@ -171,9 +173,9 @@ const Body = ({setPlayingSong}) => {
 
                 <TabPanel>
                 <div>
-                      <div className='genere-title'>
+                      <Row className='genere-title'>
                             <h2>China</h2>
-                      </div>
+                      </Row>
                       <Row>
                         {china?.map((alb) => 
                               <Col>
@@ -187,9 +189,9 @@ const Body = ({setPlayingSong}) => {
                             )}
                       </Row>
                       <br/>
-                      <div className='genere-title'>
+                      <Row className='genere-title'>
                             <h2>Japan</h2>
-                      </div>
+                      </Row>
                       <Row>
                         {japan?.map((alb) => 
                               <Col>
@@ -205,6 +207,29 @@ const Body = ({setPlayingSong}) => {
                     </div>
                 </TabPanel>
             </Tabs>
+            
+            <br/><br/>
+
+
+            <div className='maylike-container'>
+              <Row className='like-title'>
+                    <h2>You May Like</h2>
+                    <IconButton onClick={() => {setLike(songList[Math.floor(Math.random()*songList.length)])}}>
+                      <RefreshIcon class="refresh-btn"></RefreshIcon>
+                    </IconButton>
+              </Row>
+              <Row>
+                {like?.map((alb) => 
+                      <Col>
+                        <Card onClick = {() => setPlayingSong({img:alb.url,title:alb.title,author:alb.author, duration:alb.duration})}>
+                            <Card.Img className="card-img" src={alb.url}/>
+                            <Card.Title className="card-title">{alb.title}</Card.Title>
+                            <Card.Text>{alb.author}</Card.Text>
+                        </Card>
+                      </Col>
+                    )}
+              </Row>
+            </div>
             <br/><br/><br/><br/><br/>
         </div>
 
@@ -394,3 +419,5 @@ const featureWeek = [
   author:'ReoNa',
   duration: 325},
  ]
+
+ const songList = [china, japan, rock, rb, hippop, featureWeek];

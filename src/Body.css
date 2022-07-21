@@ -60,3 +60,19 @@ ol, ul {
     line-height: 58px;
     width: 10%;
 }
+
+.maylike-container {
+    background-color: #f4dada;
+    padding: 40px 10px 30px 10px;
+    border-top: #DDDDDD solid 1px;
+}
+
+.like-title h2{
+    font-weight: 520;
+}
+
+.refresh-btn{
+    height:24px;
+    width: 24px;
+    color:red;
+}
