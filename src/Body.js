@@ -11,36 +11,41 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import {IconButton } from '@mui/material';
 import { duration } from '@mui/material';
 
-const slideImages = [
-    {
-      url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Cp8P67FzRg_4rqfNqfCyoAHaCe%26pid%3DApi&f=1',
-      caption: 'Slide 1'
-    },
-    {
-        
-        url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.pLiHxqpAD30YAOdbjOG80AHaEK%26pid%3DApi&f=1',
-        caption: 'Slide 2'
-    },
-    {
-      url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.hcVnbNPmyHRuN6wY0u3EQwHaE8%26pid%3DApi&f=1',
-      caption: 'Slide 3'
-    },
-    {
-        url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%3Fid%3DOIP.vZBp7l_C56JwH5CqX0YF6wHaEK%26pid%3DApi&f=1',
-        caption: 'Slide 4'
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+
+    resources: {
+      en: {
+        translation: {
+
+        }
       },
-  ];
+      ch: {
+        translation: {
+
+        
+        }
+      }
+    },
+    lng: document.querySelector('html').lang, // if you're using a language detector, do not define the lng option
+    fallbackLng: "en",
+
+  });
+
 
 
 
 
 const Body = ({setPlayingSong}) => {
   const [like,setLike] = React.useState(rock)
-
+  const {t} = useTranslation()
   return (
     <div className='body'>
         <br/>
-
         <div>
         <div className="slideshow-container">
             <Slide>
@@ -61,10 +66,10 @@ const Body = ({setPlayingSong}) => {
         <div>
             <Tabs>
                 <TabList>
-                  <Tab>Recommended</Tab>
-                  <Tab>Featured this Week</Tab>
-                  <Tab>Genre</Tab>
-                  <Tab>Country</Tab>
+                  <Tab>{t('Recommended')}</Tab>
+                  <Tab>{t('Featured this Week')}</Tab>
+                  <Tab>{t('Genre')}</Tab>
+                  <Tab>{t('Country')}</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -116,7 +121,7 @@ const Body = ({setPlayingSong}) => {
                 <TabPanel>
                     <div>
                       <div className='genere-title'>
-                            <h2>Hip Pop</h2>
+                            <h2>{t("Hip Hop")}</h2>
                       </div>
                       <Row>
                         {hippop?.map((alb) => 
@@ -134,7 +139,7 @@ const Body = ({setPlayingSong}) => {
                     <br/>
                     <div>
                       <div className='genere-title'>
-                            <h2>R&B</h2>
+                            <h2>{t("R&B")}</h2>
                       </div>
                       <Row>
                         {rb?.map((alb) => 
@@ -152,7 +157,7 @@ const Body = ({setPlayingSong}) => {
                     <br/>
                     <div>
                       <div className='genere-title'>
-                            <h2>Rock</h2>
+                            <h2>{t('rock')}</h2>
                       </div>
                       <Row>
                         {rock?.map((alb) => 
@@ -174,7 +179,7 @@ const Body = ({setPlayingSong}) => {
                 <TabPanel>
                 <div>
                       <Row className='genere-title'>
-                            <h2>China</h2>
+                            <h2>{t("China")}</h2>
                       </Row>
                       <Row>
                         {china?.map((alb) => 
@@ -190,7 +195,7 @@ const Body = ({setPlayingSong}) => {
                       </Row>
                       <br/>
                       <Row className='genere-title'>
-                            <h2>Japan</h2>
+                            <h2>{t("Japan")}</h2>
                       </Row>
                       <Row>
                         {japan?.map((alb) => 
@@ -213,7 +218,7 @@ const Body = ({setPlayingSong}) => {
 
             <div className='maylike-container'>
               <Row className='like-title'>
-                    <h2>You May Like</h2>
+                    <h2>{t("You May Like")}</h2>
                     <IconButton onClick={() => {setLike(songList[Math.floor(Math.random()*songList.length)])}}>
                       <RefreshIcon class="refresh-btn"></RefreshIcon>
                     </IconButton>
@@ -240,6 +245,27 @@ const Body = ({setPlayingSong}) => {
 }
 
 export default Body
+
+const slideImages = [
+  {
+    url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Cp8P67FzRg_4rqfNqfCyoAHaCe%26pid%3DApi&f=1',
+    caption: 'Slide 1'
+  },
+  {
+      
+      url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.pLiHxqpAD30YAOdbjOG80AHaEK%26pid%3DApi&f=1',
+      caption: 'Slide 2'
+  },
+  {
+    url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.hcVnbNPmyHRuN6wY0u3EQwHaE8%26pid%3DApi&f=1',
+    caption: 'Slide 3'
+  },
+  {
+      url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%3Fid%3DOIP.vZBp7l_C56JwH5CqX0YF6wHaEK%26pid%3DApi&f=1',
+      caption: 'Slide 4'
+    },
+];
+
 
 const recommended1 = [
     {url:'https://www.game-ost.com/static/covers_soundtracks/2/2/22508_551213_small.jpg',
@@ -475,4 +501,5 @@ const featureWeek = [
     duration:234},
  ]
 
- const songList = [china, japan, rock, rb, hippop, featureWeek, other1, other2];
+ const songList = [china, japan, rock, rb, hippop, featureWeek, other1, other2
+];

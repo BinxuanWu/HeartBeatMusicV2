@@ -60,7 +60,7 @@
     white-space: normal;
 }
 
-.songlist_album, .songlist_artist, .songlist_number, .songlist_other, .songlist_songname, .songlist_time {
+.songlist_album, .songlist_artist, .songlist_number, .songlist_other, .songlist_songname, .songlist_time, .alb_time {
     line-height: 70px;
     height: 70px;
     overflow: hidden;
@@ -82,7 +82,14 @@
     width: 50px;
 }
 
-.songlist_time {
+.alb_time, .alb_header_time {
+    position: absolute;
+    top: 0;
+    right: 38px;
+    width: 100px;
+}
+
+.songlist_time .alb_time{
     color: #999;
 }
 
@@ -91,7 +98,7 @@
     font-weight: 600;
 }
 
-.songlist_album, .songlist_artist, .songlist_other, .songlist_time{
+.songlist_album, .songlist_artist, .songlist_other, .songlist_time, .alb_time{
     font-size: 14px;
 }
 
@@ -112,4 +119,130 @@
 }
 .MuiBox-root {
     padding: 3px 0px 0px 0px !important;
+}
+
+
+
+.singer_list_text {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.singer_list_list {
+    
+    zoom: 1;
+    margin-bottom: -24px;
+}
+
+.singer_list_item {
+    position: relative;
+    height: 80px;
+    display: table;
+    width: 100%;
+    margin-bottom: 0;
+    float: left;
+    overflow: hidden;
+}
+
+.singer_list_item--even {
+    position: relative;
+    height: 80px;
+    display: table;
+    width: 100%;
+    margin-bottom: 0;
+    float: left;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.05);
+}
+
+.singer_list_title {
+    width: 40%;
+    min-width: 280px;
+    font-weight: 400;
+    text-indent: 20px;
+    overflow: hidden;
+    line-height: 80px;
+    padding-left: 20px;
+
+}
+
+.singer_list_playlist, .singer_list_title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    
+}
+
+.singer_list_cover {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.singer_list_pic {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 50px;
+    border-radius: 50%;
+}
+
+.singer_list_cover, .singer_list_pic {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 126px;
+}
+
+ .singer_list_count, .singer_list_other, .singer_list_playlist, .singer_list_title {
+    display: table-cell;
+    height: 80px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.singer_list_title_txt {
+    float: left;
+    width: 40%;
+    max-width: 310px;
+    min-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 400;
+    text-indent: 20px;
+    overflow: hidden;
+    line-height: 80px;
+}
+
+.singer_list_playlist {
+    width: 22%;
+    padding-left: 20px;
+    color:#666
+}
+
+.singer_list_count {
+    width: 22%;
+    padding-left: 15px;
+    color: #666;
+}
+
+.singer_list_other {
+    width: 122px;
+}
+
+.singer_list_btn_focus {
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin-right: 20px;
+    border: 1px solid #c9c9c9;
+    color: #000;
+    padding: 5px 0 5px 0;
 }

@@ -5,7 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, useNavigate} from "react-router-dom";
 import swal from 'sweetalert';
 
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+
+
 function SignUp({setIsLogin}) {
+  const {t} = useTranslation()
   const [username, setUsername] = useState("")
   const [signupEmail, setSignupEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -68,42 +74,43 @@ function SignUp({setIsLogin}) {
         <Container className="signup-container">
             <Row>
                 <Col md={3}>
-                    <h2 class>Sign up</h2>
+                    <h2 class>{t('Sign up')}</h2>
                 </Col>
                 <br/><br/><br/><br/>
             </Row>
 
             <Form>
                 <Form.Group className="mb-3" controlId="signupName">
-                    <Form.Label>User Name</Form.Label>
-                    <Form.Control className='input-box' type="text" placeholder="Enter User Name"  onChange={e => setUsername(e.target.value)}/>
+                    <Form.Label>{t("User Name")}</Form.Label>
+                    <Form.Control className='input-box' type="text" placeholder={t("Enter User Name")}  onChange={e => setUsername(e.target.value)}/>
                     <Form.Text className="text-muted password-hint" >
-                        User Name maximum characters allowed is 10
+                        {t("username hint")}
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="signupEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" onChange={e => setSignupEmail(e.target.value)}/>
+                    <Form.Label>{t("Email address")}</Form.Label>
+                    <Form.Control type="email" placeholder={t("Enter your email")} onChange={e => setSignupEmail(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="signupPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control className='input-box' type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
+                    <Form.Label>{t("Password")}</Form.Label>
+                    <Form.Control className='input-box' type="password" placeholder={t("Password")} onChange={e => setPassword(e.target.value)}/>
                     <Form.Text className="text-muted password-hint" >
-                        Password should contain at least 6 characters
+                        {t('password hint')}
+                        
                     </Form.Text>
                 </Form.Group>
                 
                 <Form.Group className="mb-3" controlId="signupRePassword">
-                    <Form.Label>Re-enter your Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" onChange={e => setRePassword(e.target.value)}/>
+                    <Form.Label>{t("re-enter")}</Form.Label>
+                    <Form.Control type="password" placeholder={t("Password")} onChange={e => setRePassword(e.target.value)}/>
                     <Form.Text className="text-muted">
-                        We'll never share your password with anyone else.
+                        {t("Never")}
                     </Form.Text>
                 </Form.Group>
 
               {/* <Link class="signupBtn" to="/HeartBeatMusicWeb" style={{textDecoration:'none'}}> */}
                 <Button variant="primary" onClick={signUpCheck} >
-                  Sign up !!
+                  {t("Sign up !!")}
                 </Button>
               {/* </Link> */}
               

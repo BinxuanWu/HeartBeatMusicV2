@@ -4,6 +4,88 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+
+    resources: {
+      en: {
+        translation: {
+          'Follows':'Follows',
+          'Fans':'Fans',
+          'Post':'Post',
+          'Introduction': 'Introduction',
+          'Favourite':'Favourite',
+          'Song':'Song',
+          'Artist':'Artist',
+          'Albums':'Albums',
+          'Time': 'Time',
+            'Search': 'Search!',
+            'Sign in': 'Sign in',
+            'Sign out': 'Sign out',
+            "Recommended": "Recommended",
+            'Featured this Week':'Featured this Week',
+            'Genre':'Genre',
+            'Country':'Country',
+            'China':'China',
+            'Japan':'Japan',
+            "Hip Pop": "Hip Pop",
+            'R&B':'R&B',
+            'rock': 'Rock',
+            "You May Like":"You May Like",
+
+            "Email address": "Email address",
+            "Enter your email" : "Enter your email",
+            "Password": "Password",
+            "Never": "We'll never share your password with anyone else.",
+            "Sign in !!": "Sign in !!",
+            "Not have a Account? Sign up now!" : "Not have a Account? Sign up now!",
+
+            "Sign up" :"Sign up",
+            "User Name" : "User Name",
+            "Enter User Name":"Enter User Name",
+            "username hint": "User Name maximum characters allowed is 10",
+
+            "password hint" : "Password should contain at least 6 characters",
+            "re-enter": "Re-enter your Password",
+            "Sign up !!": "Sign up !!",
+        }
+      },
+      ch: {
+        translation: {
+          'Follows':'关注',
+            'Fans':'粉丝',
+            'Post':'推文',
+            'Introduction': '简介',
+            'Favourite':'最爱',
+            'Song':'歌曲',
+            'Artist':'艺术家',
+            'Albums':'专辑',
+            'Time': '时长',
+            'Search': '搜索！',
+            'Sign in': "登录",
+            'Sign out': '登出',
+            "Recommended": "推荐",
+            'Featured this Week':'本周精选',
+            'Genre':'风格',
+            'Country':'国家',
+            "China": '中国',
+            "Japan": "日本",
+            "Hip Pop": "嘻哈",
+            'R&B':'蓝调',
+            'rock':'摇滚',
+            "You May Like":"猜你喜欢"
+        }
+      }
+    },
+    lng: document.querySelector('html').lang, // if you're using a language detector, do not define the lng option
+    fallbackLng: "en",
+
+  });
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -1,9 +1,12 @@
 import React from 'react'
 import "./Account.css"
 import {Row, Col, Container, ListGroup} from 'react-bootstrap';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 
 function Account({setPlayingSong}) {
+    const {t} = useTranslation()
   return (
     <div>
         <div className='account-body'>
@@ -26,19 +29,19 @@ function Account({setPlayingSong}) {
                             <ul className="tab-box">
                                 <li className='fst'>
                                     <strong className='count'>12</strong>
-                                    <span>Follows</span>
+                                    <span>{t("Follows")}</span>
                                 </li>
                                 <li>
                                     <strong className='count'>221</strong>
-                                    <span>Fans</span>
+                                    <span>{t("Fans")}</span>
                                 </li>
                                 <li>
                                     <strong className='count'>14</strong>
-                                    <span>Posts</span>
+                                    <span>{t("Post")}</span>
                                 </li>
                             </ul>   
 
-                            <div className = 'introduction'>Introduction:&nbsp;&nbsp;  Hi, Weclome to Music World</div>
+                            <div className = 'introduction'>{t("Introduction")}:&nbsp;&nbsp;  Hi, Weclome to Music World</div>
 
                         </Col>
                     </Row>
@@ -47,14 +50,14 @@ function Account({setPlayingSong}) {
             </div>
 
             
-            <div class="text-fav">Favourite</div>
+            <div class="text-fav">{t('Favourite')}</div>
 
             <div className='songlist'>
                     <ul className="songlist_headerx">
-                        <li className='songlist_header_name'>Song</li>
-                        <li className='songlist_header_author'>Artist</li>
-                        <li className='songlist_header_album'>Album</li>
-                        <li className='songlist_header_time'>Time</li>
+                        <li className='songlist_header_name'>{t('Song')}</li>
+                        <li className='songlist_header_author'>{t('Artist')}</li>
+                        <li className='songlist_header_album'>{t('Albums')}</li>
+                        <li className='songlist_header_time'>{t('Time')}</li>
                     </ul>
                     <ul className='songlist_list'>
                         {searchResult?.map((song, index) => 

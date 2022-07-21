@@ -7,8 +7,13 @@ import {Link, useNavigate} from "react-router-dom";
 import { getTokenFromUrl} from "./";
 import swal from 'sweetalert';
 
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+
+
 function SignIn({setIsLogin}) {
-    
+    const {t} = useTranslation()
     const navigate = useNavigate();
 
     const [signinEmail, setSigninEmail] = useState("");
@@ -48,34 +53,35 @@ function SignIn({setIsLogin}) {
         <Container className="signin-container">
             <Row>
                 <Col md={3}>
-                    <h2 class>Sign in</h2>
+                    <h2 class>{t("Sign in")}</h2>
                 </Col>
                 <br/><br/><br/><br/>
             </Row>
 
             <Form>
                 <Form.Group className="mb-3" controlId="signinEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="input" placeholder="Enter your email" onChange = {e => setSigninEmail(e.target.value)}/>
+                    <Form.Label>{t("Email address")}</Form.Label>
+                    <Form.Control type="input" placeholder={t("Enter your email")} onChange = {e => setSigninEmail(e.target.value)}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="signinPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" onChange={e =>setPassword(e.target.value)}/>
+                    <Form.Label>{t("Password")}</Form.Label>
+                    <Form.Control type="password" placeholder={t("Password")} onChange={e =>setPassword(e.target.value)}/>
                     <Form.Text className="text-muted">
-                        We'll never share your password with anyone else.
+                        {t("Never")}
+                        
                     </Form.Text>
                 </Form.Group>
               
 
               <Button variant="primary" onClick={signInCheck}>
-                Sign in !!
+                {t("Sign in !!")}
               </Button> 
             </Form>
             <br/>
 
             <Link className ="signup" to="/signup" style={{textDecoration:'none'}}>
-                <a class="signup-hint">Not have a Account? Sign up now!</a>
+                <a class="signup-hint">{t("Not have a Account? Sign up now!")}</a>
             </Link>
 
         </Container>

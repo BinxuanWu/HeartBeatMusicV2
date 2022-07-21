@@ -41,6 +41,9 @@
     padding: 20px;    
 }
 
+.translate {
+    margin-right: 30px;
+}
 .signin {
     margin-left: 10px;
     color: white;
