@@ -1,6 +1,6 @@
 .account-body {
     background-color: #fffafa;
-    height: 130vh;
+    height: fit-content;
     margin-left: 10%;
     margin-right: 10%;
 
@@ -84,68 +84,104 @@
 .text-fav{
     float: left;
     padding: 5px 30px;
+    font-size: x-large;
     font-weight: 600;
     color: #cd5c5c
 }
 
-.songs-container {
-    border: 1px solid #e2e2e2;
+
+
+
+
+.songlist {
+    clear: both;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.songlist_headerx {
     border-top: 2px solid #c20c0c;
-}
-
-.song {
-    overflow:hidden;
-}
-
-.song-image {
-    float: left;
+    position: relative;
     height: 50px;
+    line-height: 50px;
+    background-color: rgba(0,0,0,.01);
+    padding-left: 0;
+    color: #333;
+}
+
+.songlist_list {
+    padding-left: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.songlist_item {
+    clear: both;
+    font-size: 0px;
+    overflow: hidden;
+}
+.songlist_item--even {
+    background-color: rgba(0,0,0,.05);
+}
+
+.songlist_headerx, .songlist_item {
+    position: relative;
+    padding-left: 46px;
+    padding-right: 95px;
+    margin-bottom: 0;
+}
+
+.songlist_header_name, .songlist_songname {
+    float: left;
+    width: 40%;
+    position: relative;
+    white-space: normal;
+}
+
+.songlist_header_time, .songlist_time {
+    position: absolute;
+    top: 0;
+    right: 38px;
     width: 50px;
 }
 
-.song-info {
-    text-align: left;
-    float: left;
-    position: relative;
-    padding-left: 15px;
-    padding-top: 10px;
-    width: 480px;
+.songlist_img{
+    position: absolute;
+    top:7px;
+    left: 40px;
+    height: 56px;
 }
 
-.txt {
-    
-    position: relative;
-    display: inline-block;
+.songlist_album, .songlist_artist, .songlist_number, .songlist_other, .songlist_songname, .songlist_time {
+    line-height: 70px;
+    height: 70px;
+    overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.song-name {
-    color: #333;
-    font-weight: bold;
-}
-
-.song-art {
-    color: #aeaeae;
-}
-
-.song-detail {
-    text-align: right;
-    float: right;
-    position: relative;
+.songlist_album, .songlist_artist, .songlist_header_album, .songlist_header_author {
+    float: left;
     padding-left: 15px;
-    padding-top: 10px;
-
+    width: 20%;
+    box-sizing: border-box;
 }
 
-.song-time {
-    color:#666;
-    margin-left: 100px;
-    padding-top: 10px;
-    float:left
+
+
+.songlist_time {
+    color: #999;
 }
 
-.song-comment {
-    color: #555;
-    float:right;
-    padding-top: 10px;
+.songlist_songname {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.songlist_album, .songlist_artist, .songlist_other, .songlist_time{
+    font-size: 14px;
+}
+
+.songlist_album, .songlist_artist {
+    color:#666666;
 }

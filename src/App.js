@@ -71,7 +71,7 @@ function App() {
           element={
           <>
           <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
-          <Account/>
+          <Account setPlayingSong={setPlayingSong}/>
           <Footer playingSong={playingSong}/>
           </>}/>
 

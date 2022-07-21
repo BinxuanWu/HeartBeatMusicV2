@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Search.css";
+import styles from "./Search.css";
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import {Row, Col, Container, ListGroup} from 'react-bootstrap';
@@ -121,7 +121,7 @@ function Search({setPlayingSong}) {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                <div className='songlist'>
+                <div className={styles.songlist}>
                         
                         <ul className="songlist_header">
                             <li className='songlist_header_name'>Song</li>
@@ -167,10 +167,10 @@ function Search({setPlayingSong}) {
                 </TabPanel>
             </SwipeableViews>
         </Box>
-            
+        <br/><br/><br/><br/><br/><br/><br/>
         
         </div>
-        <br/><br/><br/><br/><br/><br/><br/>
+        
     </div>
   )
 }
@@ -236,7 +236,7 @@ const searchResult = [
     {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.-rWyFQ4FWhRWPyniBuXT_QHaHa%26pid%3DApi&f=1',
     title:'No brand girls',
     author:'μ\'s',
-    album: '',
+    album: 'No brand girls',
     duration:224},
     {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.0I9QQp_DUCtroecU1wkQcQHaHa%26pid%3DApi&f=1',
     title:'FIRE BIRD',

@@ -1,6 +1,6 @@
 .search-body {
     background-color: #fffafa;
-    height: 130vh;
+    height: fit-content;
     margin-left: 10%;
     margin-right: 10%;
 
@@ -12,92 +12,6 @@
 
 }
 
-
-
-.result-container {
-    float: left;
-    width: 100%;
-}
-
-.songs-container {
-    border: 1px solid #e2e2e2;
-    border-top: 2px solid #c20c0c;
-}
-
-.song {
-    overflow:hidden;
-}
-
-.song-image {
-    float: left;
-    height: 50px;
-    width: 50px;
-}
-
-.song-info {
-    text-align: left;
-    float: left;
-    position: relative;
-    padding-left: 15px;
-    padding-top: 10px;
-    width: 480px;
-}
-
-.txt {
-    
-    position: relative;
-    display: inline-block;
-    text-overflow: ellipsis;
-}
-
-.song-name {
-    color: #333;
-    font-weight: bold;
-}
-
-.song-art {
-    color: #aeaeae;
-}
-
-.song-detail {
-    text-align: right;
-    float: right;
-    position: relative;
-    padding-left: 15px;
-    padding-top: 10px;
-
-}
-
-.song-time {
-    color:#666;
-    margin-left: 100px;
-    padding-top: 10px;
-    float:left
-}
-
-.song-comment {
-    color: #555;
-    float:right;
-    padding-top: 10px;
-}
-
-
-
-
-.MuiTabs-flexContainer {
-    color:#333333;
-  }
-  
-.MuiTabs-indicator {
-    background-color: red !important;
-}
-.MuiButtonBase-root {
-    font-weight: 600 !important;
-    font-size: medium !important;
-}
-.MuiBox-root {
-    padding: 3px 0px 0px 0px !important;
-}
 .songlist {
     font-size: 14px;
     overflow: hidden;
@@ -185,3 +99,17 @@
     color:#666666;
 }
 
+.MuiTabs-flexContainer {
+    color:#333333;
+  }
+  
+.MuiTabs-indicator {
+    background-color: red !important;
+}
+.MuiButtonBase-root {
+    font-weight: 600 !important;
+    font-size: medium !important;
+}
+.MuiBox-root {
+    padding: 3px 0px 0px 0px !important;
+}
