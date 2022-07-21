@@ -78,18 +78,18 @@ function Comment({playingSong}) {
 
     <br/>
     <div>
-        <FloatingLabel controlId="floatingTextarea2" label="Comments">
+        <FloatingLabel controlId="floatingTextarea2" label="Comments" style ={{marginBottom: "10px"}}>
           <Form.Control
             as="textarea"
             placeholder="Leave a comment here"
             style={{ height: '100px', width:"97%"}}
           />
         </FloatingLabel>
-        <Button variant="outline-danger">{t("Comment")}</Button>
+        <Button style={{float: "right", padding: "15px 45px 15px 45px"}} variant="outline-danger">{t("Comment")}</Button>
     </div>
     
 
-    <br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
     
     </div>
     
