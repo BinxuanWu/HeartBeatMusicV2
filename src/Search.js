@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./Search.css";
+import "./Search.css";
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import {Row, Col, Container, ListGroup} from 'react-bootstrap';
