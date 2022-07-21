@@ -52,3 +52,11 @@ ol, ul {
     font-size: small;
     color:#888888;
 }
+
+.genere-title h2{
+    float: left;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 58px;
+    width: 10%;
+}

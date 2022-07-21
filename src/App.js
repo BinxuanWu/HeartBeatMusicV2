@@ -19,7 +19,6 @@ function App() {
 
   const [isLogin, setIsLogin] = React.useState(false);
 
-  localStorage.setItem('isLogin', false);
 
   return (
     <div className="App">
