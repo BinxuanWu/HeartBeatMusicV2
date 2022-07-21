@@ -2,6 +2,7 @@ import React from 'react'
 import "./Body.css"
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import Footer from './Footer'
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -59,7 +60,15 @@ const slideImages = [
  ]
 
 
-function Body() {
+const Body = ({setPlayingSong}) => {
+  let alreadySet = false;
+  
+
+  const changeFooter = (img, title, author) => {
+    setPlayingSong({img: img, title: title, author: author})
+
+  }
+
   return (
     <div className='body'>
         <br/>
@@ -96,8 +105,8 @@ function Body() {
                       <Row>
                           {recommended1?.map((alb) => 
                             <Col>
-                              <Card>
-                                  <Card.Img class="card-img" src={alb.url}/>
+                              <Card onClick = {() => setPlayingSong({img:alb.url,title:alb.title,author:alb.author})}>
+                                  <Card.Img class="card-img" src={alb.url} />
                                   <Card.Title class="card-title">{alb.title}</Card.Title>
                                   <Card.Text>{alb.author}</Card.Text>
                               </Card>
@@ -109,7 +118,7 @@ function Body() {
                       <Row>
                         {recommended2?.map((alb) => 
                               <Col>
-                                <Card>
+                                <Card onClick = {() => setPlayingSong({img:alb.url,title:alb.title,author:alb.author})}>
                                     <Card.Img class="card-img" src={alb.url}/>
                                     <Card.Title class="card-title">{alb.title}</Card.Title>
                                     <Card.Text>{alb.author}</Card.Text>

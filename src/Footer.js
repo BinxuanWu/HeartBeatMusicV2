@@ -9,15 +9,18 @@ import PauseIcon from '@mui/icons-material/Pause';
 import { Grid, Slider, Box, IconButton, Icon } from '@mui/material';
 
 
-function Footer() {
+const Footer = ({playingSong}) =>{
+
+
     const duration = 232;
-    const [position, setPosition] = React.useState(34);
+    const [position, setPosition] = React.useState(0);
     const [paused, setPaused] = React.useState(false);
     function formatDuration (value) {
         const minute = Math.floor(value / 60);
         const secondLeft = value - minute * 60;
         return `${minute}:${secondLeft < 10 ? `0${secondLeft}` : secondLeft}`;
     }
+
 
   return (
     <div className='footer'>
@@ -47,12 +50,12 @@ function Footer() {
 
         <div className = "footer_right">
             <img className='footer_albumLogo'
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.V135E5CiVbo76oo5qoBOGAHaGl%26pid%3DApi&f=1" 
+                src={playingSong.img}
                 alt=""
             />
             <div className='footer_songInfo'>
-                <h5>依存香炉</h5>
-                <p>DECO*27/Hatsune Miku</p>
+                <h5>{playingSong.title}</h5>
+                <p>{playingSong.author}</p>
             </div>
             <div className = 'footer_time'>
                 <Slider 
@@ -103,3 +106,4 @@ function Footer() {
 }
 
 export default Footer
+

@@ -37,6 +37,10 @@
     color:white;
 }
 
+.footer_songInfo {
+    width: 20%;
+}
+
 .footer_songInfo p {
     color: #DDDDDD;
     font-weight: lighter;
