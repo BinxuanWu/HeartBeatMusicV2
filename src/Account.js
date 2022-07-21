@@ -1,14 +1,11 @@
 import React from 'react'
 import "./Account.css"
-import Header from "./Header"
 import {Row, Col, Container, ListGroup} from 'react-bootstrap';
-import Footer from "./Footer"
 import { List } from '@mui/material';
 
 function Account() {
   return (
     <div>
-        <Header/>
         <div className='account-body'>
             <div className = 'account-info-container'>
                 <Container>
@@ -175,7 +172,6 @@ function Account() {
             
             
         </div>
-        <Footer/>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import {Link, useNavigate} from "react-router-dom";
 import { getTokenFromUrl} from "./";
 import swal from 'sweetalert';
 
-function SignIn() {
+function SignIn({setIsLogin}) {
     
     const navigate = useNavigate();
 
@@ -34,7 +34,8 @@ function SignIn() {
             button: "Start"
         })
         .then(() => {
-            navigate('/HeartBeatMusicWeb' , {state : {isLogin: true}});
+            setIsLogin(true);
+            navigate('/HeartBeatMusicWeb' );
         });
 
         
@@ -43,7 +44,6 @@ function SignIn() {
 
   return (
     <div>
-        <Header/>
         <div className="sign-body">
         <Container className="signin-container">
             <Row>

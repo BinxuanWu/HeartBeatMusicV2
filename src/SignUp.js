@@ -1,12 +1,11 @@
 import {useState, React } from 'react';
 import "./SignUp.css";
-import Header from "./Header";
 import {Row, Col, Container, Form, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, useNavigate} from "react-router-dom";
 import swal from 'sweetalert';
 
-function SignUp() {
+function SignUp({setIsLogin}) {
   const [username, setUsername] = useState("")
   const [signupEmail, setSignupEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,7 +23,7 @@ function SignUp() {
         return;
       }
       const regex = new RegExp("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$");
-      if (signupEmail == "") {
+      if (signupEmail === "") {
         swal("Empty Email","Please enter your email","warning")
         return;
       }else if (!signupEmail.match(regex)){
@@ -32,7 +31,7 @@ function SignUp() {
         return;
       }
 
-      if (password == "" ) {
+      if (password === "" ) {
         swal("Empty Password","Please enter your password","warning")
         return;
       }
@@ -40,15 +39,14 @@ function SignUp() {
         swal("Short Password","Please enter at least 6 characters","warning")
         return;
       }
-      if (rePassword == "") {
+      if (rePassword === "") {
         swal("Empty Password","Please re-enter your password to confirm","warning")
         return;
       }
-      if (password != rePassword) {
+      if (password !== rePassword) {
         swal("Different Password","The two passwords you entered do not match.","error")
         return;
       }
-       let isLogin = true;
        swal ({
         title : "Sign up Success!",
         text: "Start your journey here!!!",
@@ -56,7 +54,8 @@ function SignUp() {
         button: "Start"
        })
        .then(() => {
-          navigate('/HeartBeatMusicWeb' , {state: {isLogin: true}});
+          setIsLogin(true);
+          navigate('/HeartBeatMusicWeb');
         });
 
   }
@@ -65,7 +64,6 @@ function SignUp() {
 
   return (
     <div className='signup-body'>
-        <Header/>
         <div className="sign-body">
         <Container className="signup-container">
             <Row>

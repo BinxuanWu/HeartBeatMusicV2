@@ -8,13 +8,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Link , useNavigate, useLocation} from "react-router-dom";
 // import {isAuth} from "../../utils/auth";
 
-function Header() {
+function Header({isLogin,setIsLogin}) {
     
-    var isLogin = false;
 
-    const location = useLocation();
     try {
-        isLogin = location.state.isLogin;
         console.log(isLogin+"xxxxx")
     }catch(e) {
         console.log("!!!!!!!!!!!!")
@@ -54,7 +51,7 @@ function Header() {
                     </IconButton>
 
                 </Link>
-                <Link className ="signin" to="/" style={{textDecoration:'none'}} state={{isLogin:false}}>
+                <Link className ="signin" to="/" style={{textDecoration:'none'}} onClick={() => setIsLogin(false)}>
                     <h6>Sign out</h6>
                 </Link>
             </div>

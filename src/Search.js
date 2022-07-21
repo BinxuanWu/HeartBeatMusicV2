@@ -13,7 +13,7 @@ const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 function Search() {
   return (
     <div>
-        <Header/>
+        
         <div className='search-body'>
 
        <Nav className="serch-navs" justify variant="tabs" defaultActivityKey="link-all" activeKey={1} onSelect = {handleSelect}>
@@ -160,7 +160,7 @@ function Search() {
                 </ListGroup>
             </div>
         </div>
-        <Footer/>
+        
     </div>
   )
 }

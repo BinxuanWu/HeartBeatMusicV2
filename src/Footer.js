@@ -12,7 +12,7 @@ import { Grid, Slider, Box, IconButton, Icon } from '@mui/material';
 const Footer = ({playingSong}) =>{
 
 
-    const duration = 232;
+    const duration = playingSong.duration;
     const [position, setPosition] = React.useState(0);
     const [paused, setPaused] = React.useState(false);
     function formatDuration (value) {

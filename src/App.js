@@ -14,7 +14,10 @@ function App() {
   const [playingSong, setPlayingSong] = React.useState({
     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.V135E5CiVbo76oo5qoBOGAHaGl%26pid%3DApi&f=1",
     title: "依存香炉",
-    author: 'DECO*27/Hatsune Miku'})
+    author: 'DECO*27/Hatsune Miku',
+    duration: 200})
+
+  const [isLogin, setIsLogin] = React.useState(false);
 
   localStorage.setItem('isLogin', false);
 
@@ -22,44 +25,63 @@ function App() {
     <div className="App">
 
 
-
     <BrowserRouter>
       <Routes>
 
         <Route path="/HeartBeatMusicWeb" 
           element={<>
-            <Header/>
+            <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
             <Body setPlayingSong={setPlayingSong}/>
             <Footer playingSong={playingSong}/></>
           }/>
 
         <Route path="/HeartBeatMusicWebV2" 
           element={<>
-            <Header/>
+            <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
+            <Body setPlayingSong={setPlayingSong}/>
+            <Footer playingSong={playingSong}/></>
+          }/>
+          <Route path="/HeartBeatMusicV2" 
+          element={<>
+            <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
             <Body setPlayingSong={setPlayingSong}/>
             <Footer playingSong={playingSong}/></>
           }/>
 
         <Route path="/" 
           element={<>
-            <Header/>
+            <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
             <Body setPlayingSong={setPlayingSong}/>
             <Footer playingSong={playingSong}/></>
           }/>
 
+
         <Route path="/signin" 
           element={
-          <SignIn/>
+            <><Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
+            <SignIn setIsLogin = {setIsLogin}/></>
+          
           }/>
 
         <Route path="/signup" 
-          element={<SignUp/>}/>
+          element={
+            <><Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
+            <SignUp setIsLogin = {setIsLogin}/></>}/>
 
         <Route path="/account" 
-          element={<Account/>}/>
+          element={
+          <>
+          <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
+          <Account/>
+          <Footer playingSong={playingSong}/>
+          </>}/>
 
         <Route path="/search"
-          element={<Search/>}/>
+          element={<>
+          <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
+          <Search/>
+          <Footer playingSong={playingSong}/></>
+          }/>
 
         
       </Routes>
