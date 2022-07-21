@@ -21,43 +21,43 @@ function SignUp({setIsLogin}) {
 
   const signUpCheck = ()=> {
       if (username == "") {
-        swal("Empty user name","Please enter your username","warning")
+        swal(i18n.t("Empty user name"),i18n.t("Please enter your username"),"warning")
         return;
       }
       if (username.length > 10) {
-        swal("Long User Name","Please enter at most 10 characters","warning")
+        swal(i18n.t("Long User Name"),i18n.t("Please enter at most 10 characters"),"warning")
         return;
       }
       const regex = new RegExp("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$");
       if (signupEmail === "") {
-        swal("Empty Email","Please enter your email","warning")
+        swal(i18n.t("Empty email"),i18n.t("Please enter your email"),"warning")
         return;
       }else if (!signupEmail.match(regex)){
-        swal("Invaid Email Format","Please enter your email in correct format","error")
+        swal(i18n.t("Invaid Email Format"),i18n.t("Please enter your email in correct format"),"error")
         return;
       }
 
       if (password === "" ) {
-        swal("Empty Password","Please enter your password","warning")
+        swal(i18n.t("Empty Password"),i18n.t("Please enter your password"),"warning")
         return;
       }
       if (password.length < 6) {
-        swal("Short Password","Please enter at least 6 characters","warning")
+        swal(i18n.t("Short Password"),i18n.t("Please enter at least 6 characters"),"warning")
         return;
       }
       if (rePassword === "") {
-        swal("Empty Password","Please re-enter your password to confirm","warning")
+        swal(i18n.t("Empty Password"),i18n.t("Please re-enter your password to confirm"),"warning")
         return;
       }
       if (password !== rePassword) {
-        swal("Different Password","The two passwords you entered do not match.","error")
+        swal(i18n.t("Different Password"),i18n.t("The two passwords you entered do not match."),"error")
         return;
       }
        swal ({
-        title : "Sign up Success!",
-        text: "Start your journey here!!!",
+        title : i18n.t("Sign up Success!"),
+        text: i18n.t("Start your journey here!!!"),
         icon: "success",
-        button: "Start"
+        button: i18n.t("Start")
        })
        .then(() => {
           setIsLogin(true);

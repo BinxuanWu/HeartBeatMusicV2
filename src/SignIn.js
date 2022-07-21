@@ -22,19 +22,19 @@ function SignIn({setIsLogin}) {
     const signInCheck = () => {
         const regex = new RegExp("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$");
         if (signinEmail === "") {
-            swal("Empty email","Please enter your email","warning")
+            swal(i18n.t("Empty email"),i18n.t("Please enter your email"),"warning")
             return;
         }else if (!signinEmail.match(regex)){
-            swal("Invaid Email Format","Please enter your email in correct format","error")
+            swal(i18n.t("Invaid Email Format"),i18n.t("Please enter your email in correct format"),"error")
             return;
           }
         if (password === "") {
-            swal("Empty password","Please enter your password","warning")
+            swal(i18n.t("Empty password"),i18n.t("Please enter your password"),"warning")
             return;
         }
         swal ({
-            title : "Sign in Success!",
-            text: "Good to see you again",
+            title : i18n.t("Sign in Success!"),
+            text: i18n.t("Good to see you again"),
             icon: "success",
             button: "Start"
         })

@@ -53,8 +53,29 @@ i18n
             "re-enter": "Re-enter your Password",
             "Sign up !!": "Sign up !!",
 
-            "Comment":"Comment"
-        }
+            "Comment":"Comment",
+
+            "Empty email": "Empty Email",
+            "Please enter your email" :"Please enter your email",
+            "Invaid Email Format" : "Invaid Email Format",
+            "Please enter your email in correct format" : "Please enter your email in correct format",
+            "Empty password":"Empty password",
+            "Please enter your password" :"Please enter your password",
+            "Sign in Success!":"Sign in Success!",
+            "Good to see you again" :"Good to see you again",
+            "Start":"Start",
+
+            "Empty user name" :"Empty user name",
+            "Please enter your username" :"Please enter your username",
+            "Long User Name" : "Long User Name",
+            "Please enter at most 10 characters": "Please enter at most 10 characters",
+            "Short Password" : "Short Password",
+            "Please enter at least 6 characters" : "Please enter at least 6 characters",
+            "Please re-enter your password to confirm": "Please re-enter your password to confirm",
+            "Different Password" : "Different Password",
+            "Sign up Success!": "Sign up Success!",
+            "Start your journey here!!!" : "Start your journey here!!!"
+          }   
       },
       ch: {
         translation: {
@@ -97,7 +118,29 @@ i18n
             "re-enter": "再次输入你的密码",
             "Sign up !!": "注册 !!",
 
-            "Comment" : "评论"
+            "Comment" : "评论",
+
+            "Empty email": "邮箱为空",
+            "Please enter your email" :"请输入你的邮箱",
+            "Invaid Email Format" : "错误的邮箱格式",
+            "Please enter your email in correct format" : "请以正确格式输入邮箱",
+            "Empty password":"密码为空",
+            "Please enter your password" :"请输入你的密码",
+            "Sign in Success!":"登录成功！！",
+            "Good to see you again" :"再见到你真好",
+            "Start":"开始！",
+
+
+            "Empty user name" :"用户名为空",
+            "Please enter your username" :"请输入你的用户名",
+            "Long User Name" : "用户名过长",
+            "Please enter at most 10 characters": "请输入最多10个字符",
+            "Short Password" : "密码过短",
+            "Please enter at least 6 characters" : "请输入最少6个字符",
+            "Please re-enter your password to confirm": "请再次输入密码进行确认",
+            "Different Password" : "密码不同",
+            "Sign up Success!": "注册成功！！",
+            "Start your journey here!!!" : "在这里，开启你的旅途！！"
         }
       }
     },
