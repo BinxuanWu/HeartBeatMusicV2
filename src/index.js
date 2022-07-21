@@ -52,6 +52,8 @@ i18n
             "password hint" : "Password should contain at least 6 characters",
             "re-enter": "Re-enter your Password",
             "Sign up !!": "Sign up !!",
+
+            "Comment":"Comment"
         }
       },
       ch: {
@@ -77,7 +79,25 @@ i18n
             "Hip Pop": "嘻哈",
             'R&B':'蓝调',
             'rock':'摇滚',
-            "You May Like":"猜你喜欢"
+            "You May Like":"猜你喜欢",
+
+            "Email address": "电子邮箱",
+            "Enter your email" : "输入你的邮箱",
+            "Password": "密码",
+            "Never": "我们绝不会泄露你的密码",
+            "Sign in !!": "登录 !!",
+            "Not have a Account? Sign up now!" : "没有账户？立即注册！",
+
+            "Sign up" :"注册",
+            "User Name" : "用户名",
+            "Enter User Name":"输入你的用户名",
+            "username hint": "用户名最长支持10个字符",
+
+            "password hint" : "密码长度应当大于6个字符",
+            "re-enter": "再次输入你的密码",
+            "Sign up !!": "注册 !!",
+
+            "Comment" : "评论"
         }
       }
     },

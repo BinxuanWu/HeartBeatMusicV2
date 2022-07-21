@@ -6,6 +6,11 @@ import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {Container,Row,Col} from 'react-bootstrap';
 import {List, ListItem ,ListItemText, ListItemAvatar, Divider, Avatar, Typography} from '@mui/material';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
+import { width } from '@mui/system';
+import Button from 'react-bootstrap/Button';
+
 
 
 const commentsList = [
@@ -22,6 +27,7 @@ const commentsList = [
 ]
 
 function Comment({playingSong}) {
+  const {t} = useTranslation()
   return (
     
     <div className='comment-body'>
@@ -66,7 +72,22 @@ function Comment({playingSong}) {
       </ListItem>
       ))}
       
+      
+      
     </List>
+
+    <br/>
+    <div>
+        <FloatingLabel controlId="floatingTextarea2" label="Comments">
+          <Form.Control
+            as="textarea"
+            placeholder="Leave a comment here"
+            style={{ height: '100px', width:"97%"}}
+          />
+        </FloatingLabel>
+        <Button variant="outline-danger">{t("Comment")}</Button>
+    </div>
+    
 
     <br/><br/><br/><br/><br/>
     
