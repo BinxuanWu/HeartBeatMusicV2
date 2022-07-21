@@ -5,7 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import logo from "./images/logo.png";
 import { IconButton} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { Link , useNavigate, useLocation} from "react-router-dom";
+import { Link} from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import i18next from "i18next";
@@ -13,17 +13,6 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import { ButtonGroup } from 'react-bootstrap';
 import LanguageIcon from '@mui/icons-material/Language';
 
-
-const languages = [
-    {code: "en",
-    name: 'English',
-    country_code : 'en'  
-    },
-    {code: "ch",
-    name: '简体中文',
-    country_code : 'ch'  
-    }
-]
 
 function Header({isLogin,setIsLogin}) {
     const {t} = useTranslation();

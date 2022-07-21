@@ -10,50 +10,6 @@ import {Tabs, Tab, Box, AppBar, Typography, useTheme} from '@mui/material'
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
-i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-
-    resources: {
-      en: {
-        translation: {
-            'Song':'Song',
-            'Artist':'Artist',
-            'Albums':'Albums',
-            'Album':'Album',
-            'Time': 'Time',
-            'All':'All',
-            "Songs":"Songs",
-            "Artists":"Artists",
-            "Play List" : "Play List",
-            "Fans":"Fans",
-            "Following":"Following",
-            "Follow":"Follow",
-            "Publish Time" :"Publish Time"
-        }
-      },
-      ch: {
-        translation: {
-            'Song':'歌曲',
-            'Artist':'艺术家',
-            'Albums':'专辑',
-            'Album':'专辑',
-            'Time': '时长',
-            'All':'综合',
-            "Songs":"单曲",
-            "Artists":"歌手",
-            "Play List" : "歌单",
-            "Fans":"粉丝",
-            "Following":"关注中",
-            "Follow":"关注",
-            "Publish Time" : "发布时间"
-        }
-      }
-    },
-    lng: document.querySelector('html').lang, // if you're using a language detector, do not define the lng option
-    fallbackLng: "en",
-
-  });
 
 const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 

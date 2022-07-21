@@ -6,7 +6,9 @@ import SkipNextIcon from '@mui/icons-material/SkipNext';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
-import { Grid, Slider, Box, IconButton, Icon } from '@mui/material';
+import { Grid, Slider, Box, IconButton } from '@mui/material';
+import MessageIcon from '@mui/icons-material/Message';
+import { Link } from "react-router-dom";
 
 
 const Footer = ({playingSong}) =>{
@@ -97,6 +99,14 @@ const Footer = ({playingSong}) =>{
                   <div class="slider-status">{formatDuration(position)}</div>
                   <div class="slider-status">-{formatDuration(duration - position)}</div>
                 </Box>
+            </div>
+            <div>
+            <Link to="/comment">
+            <IconButton style = {{color: "white", marginLeft:"50px"}}>
+                <MessageIcon className='footer_icon'/>
+            </IconButton>
+            </Link>
+              
             </div>
             
 

@@ -5,6 +5,7 @@ import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 import Account from "./Account"
 import Search from "./Search"
+import Comment from "./Comment"
 import { BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 import React ,{ useState } from "react";
 
@@ -83,6 +84,13 @@ function App() {
           element={<>
           <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
           <Search setPlayingSong={setPlayingSong}/>
+          <Footer playingSong={playingSong}/></>
+          }/>
+
+        <Route path="/comment"
+          element={<>
+          <Header isLogin = {isLogin} setIsLogin = {setIsLogin}/>
+          <Comment playingSong={playingSong}/>
           <Footer playingSong={playingSong}/></>
           }/>
 
