@@ -5,7 +5,21 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {Container,Row,Col} from 'react-bootstrap';
+import {List, ListItem ,ListItemText, ListItemAvatar, Divider, Avatar, Typography} from '@mui/material';
 
+
+const commentsList = [
+  {img:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.uUr6Hdgdi2It0iXQTx27_wHaHU%26pid%3DApi&f=1",
+  name: "Hot Coco",
+  comment:"The lyrics being presented as actual lines of code gives me a warm tingly feeling. This is definitely by far one of my favorite songs Mili's put out.Also fun fact, the year 3691 BC is roughly when humans started using currency and tracking transactions, and AD 617 is a year in which many political figures were assassinated and tribal civil wars broke out. How these factor into the AI\'s development however, I guess that's for the watcher to decide."},
+  {img:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Aq0QcAOBqUpb1a6_Z2zyvAHaHa%26pid%3DApi&f=1",
+  name: "JADE",
+  comment:"I swear, the way momocashew sings is very reminiscent of Hatsune Miku. This is good. The effort most accomplished producers put into Vocaloids to make them sound just right for the song they're making is  a m a z i n g  so for momocashew to sing in a way reminiscent of than, but taking it her own way is just  f a n t a s t  i c"},
+  {img:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.pvXjMpBCJHTX-4mbUcLbyQHaHY%26pid%3DApi&f=1",
+    name: "Aar",
+  comment:"So many chills when she sang \"Not all blossoms spark\"! the eerie chanting in the beginning, and the epic and grand orchestral feeling in the chorus makes this song feel so powerful and otherworldly. I can feel the magic with each note."
+  }
+]
 
 function Comment({playingSong}) {
   return (
@@ -26,45 +40,36 @@ function Comment({playingSong}) {
         </Container>
         <br/><br/>
 
+      <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
 
-    <ListGroup as="ul">
-      <ListGroup.Item
-        as="li"
-        className="d-flex justify-content-between align-items-start"
-      >
-        <div className="ms-2 me-auto cmt-li" >
-          <div className="fw-bold">Subheading</div>
-          Good!!!!!!!!!!!!!!!!!!Good!!!!!!!!!!!!!!!!!!!!!!!
-        </div>
-        <Badge bg="primary" pill>
-          14
-        </Badge>
-      </ListGroup.Item>
-      <ListGroup.Item
-        as="li"
-        className="d-flex justify-content-between align-items-start"
-      >
-        <div className="ms-2 me-auto">
-          <div className="fw-bold">Subheading</div>
-          Cras justo odio
-        </div>
-        <Badge bg="primary" pill>
-          14
-        </Badge>
-      </ListGroup.Item>
-      <ListGroup.Item
-        as="li"
-        className="d-flex justify-content-between align-items-start"
-      >
-        <div className="ms-2 me-auto">
-          <div className="fw-bold">Subheading</div>
-          Cras justo odio
-        </div>
-        <Badge bg="primary" pill>
-          14
-        </Badge>
-      </ListGroup.Item>
-    </ListGroup>
+      {commentsList.map((cmt, i) => (
+        <ListItem alignItems="flex-start" sx={{width: '96%'}}>
+        <ListItemAvatar>
+          <Avatar alt="" src={cmt.img} />
+        </ListItemAvatar>
+        <ListItemText
+          primary={cmt.name}
+          secondary={
+            <React.Fragment style={{paddingRight: "10px"}}>
+              <Typography
+                sx={{ display: 'inline' }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+              </Typography>
+              {cmt.comment}
+            </React.Fragment>
+          }
+        />
+        
+      </ListItem>
+      ))}
+      
+    </List>
+
+    <br/><br/><br/><br/><br/>
+    
     </div>
     
     
@@ -72,3 +77,4 @@ function Comment({playingSong}) {
 }
 
 export default Comment
+
