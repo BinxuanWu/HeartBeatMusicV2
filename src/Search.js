@@ -93,7 +93,7 @@ function Search({setPlayingSong}) {
                         <ul className='songlist_list'>
                             {searchResult?.map((song, index) => 
                                 index%2 === 0 ? (                                
-                                    <li>
+                                    <li onClick = {() => setPlayingSong({img:song.url, title: song.title, author:song.author, duration:song.duration})}>
                                     <div className='songlist_item songlist_item--even'>
                                         <img className='songlist_img'src={song.url}/>
                                         <div className='songlist_songname'>{song.title}</div>
@@ -104,7 +104,7 @@ function Search({setPlayingSong}) {
                                     </div>
                                     </li>
                                     ) : (
-                                    <li>
+                                    <li onClick = {() => setPlayingSong({img:song.url, title: song.title, author:song.author, duration:song.duration})}>
                                     <div className='songlist_item'>
                                         <img className='songlist_img'src={song.url}/>
                                         <div className='songlist_songname'>{song.title}</div>
@@ -121,7 +121,43 @@ function Search({setPlayingSong}) {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                    Item Two
+                <div className='songlist'>
+                        
+                        <ul className="songlist_header">
+                            <li className='songlist_header_name'>Song</li>
+                            <li className='songlist_header_author'>Artist</li>
+                            <li className='songlist_header_album'>Album</li>
+                            <li className='songlist_header_time'>Time</li>
+                        </ul>
+                        <ul className='songlist_list'>
+                            {searchResult?.map((song, index) => 
+                                index%2 === 0 ? (                                
+                                    <li onClick = {() => setPlayingSong({img:song.url, title: song.title, author:song.author, duration:song.duration})}>
+                                    <div className='songlist_item songlist_item--even'>
+                                        <img className='songlist_img'src={song.url}/>
+                                        <div className='songlist_songname'>{song.title}</div>
+                                        <div className='songlist_artist'>{song.author}</div>
+                                        <div className='songlist_time'>
+                                            {`${Math.floor(song.duration/60)}`}:{`${(song.duration - Math.floor(song.duration/60) * 60) < 10 ? `0${(song.duration - Math.floor(song.duration/60) * 60)}` : (song.duration - Math.floor(song.duration/60) * 60)}`}</div>
+                                        <div className='songlist_album'>{song.album}</div>
+                                    </div>
+                                    </li>
+                                    ) : (
+                                    <li onClick = {() => setPlayingSong({img:song.url, title: song.title, author:song.author, duration:song.duration})}>
+                                    <div className='songlist_item'>
+                                        <img className='songlist_img'src={song.url}/>
+                                        <div className='songlist_songname'>{song.title}</div>
+                                        <div className='songlist_artist'>{song.author}</div>
+                                        <div className='songlist_time'>
+                                            {`${Math.floor(song.duration/60)}`}:{`${(song.duration - Math.floor(song.duration/60) * 60) < 10 ? `0${(song.duration - Math.floor(song.duration/60) * 60)}` : (song.duration - Math.floor(song.duration/60) * 60)}`}</div>
+                                        <div className='songlist_album'>{song.album}</div>
+                                    </div>
+                                    </li>
+                                    )
+
+                            )}
+                        </ul>
+                    </div>
                 </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
                     Item Three
@@ -132,8 +168,9 @@ function Search({setPlayingSong}) {
             </SwipeableViews>
         </Box>
             
-        </div>
         
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/>
     </div>
   )
 }
@@ -156,34 +193,55 @@ const searchResult = [
     author:'黒うさP/初音ミク',
     album: '千本桜',
     duration:321},
-    {url:'',
-    title:'',
-    author:'',
-    album: '',
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.AHdvDqpF6MicKlo7xKJ4lwHaHa%26pid%3DApi&f=1',
+    title:'妄想感傷代償連盟',
+    author:'DECO*27/初音ミク',
+    album: 'GHOST',
     duration:234},
-    {url:'',
-    title:'',
-    author:'',
-    album: '',
-    duration:275},
-    {url:'',
-    title:'',
-    author:'',
-    album: '',
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.QcEXGjyy454SHr3kHjNRtwHaHa%26pid%3DApi&f=1',
+    title:'群青',
+    author:'YOASOBI',
+    album: '群青',
     duration:254},
-    {url:'',
-    title:'',
-    author:'',
-    album: '',
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.oQK2rD1dCKtvshj8iR9i9gHaHa%26pid%3DApi&f=1',
+    title:'乙女解剖',
+    author:'DECO*27/初音ミク',
+    album: 'アンドロイドガール',
+    duration:275},
+    {url:'https://t2.genius.com/unsafe/406x406/https%3A%2F%2Fimages.genius.com%2F6b872248895ac66d8f91b2bcf516669c.1000x1000x1.jpg',
+    title:'​world.execute(me);',
+    author:'Mili',
+    album: 'Miracle Milk',
     duration:285},
-    {url:'',
-    title:'',
-    author:'',
-    album: '',
+    {url:'https://images.squarespace-cdn.com/content/v1/52143a7ae4b0f9bd8308dc73/1572670051358-L6L9GBPXZ3L5XX59LGZZ/%E9%99%90%E5%AE%9A%E7%89%88_%E8%A1%A81.jpg?format=500w',
+    title:'RTRT',
+    author:'Mili',
+    album: 'Millennium Mother',
     duration:283},
-    {url:'',
-    title:'',
-    author:'',
-    album: '',
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.nDanIoE5yIOQi-9-lc-QDgHaHa%26pid%3DApi&f=1',
+    title:'DAJA VU',
+    author:'Dave Rodgers',
+    album: 'DEJA VU',
     duration:260},
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.hp6PZqeLVALtUBYosVZaCgHaHa%26pid%3DApi&f=1',
+    title:'Hall of Fame',
+    author:'The Script',
+    album: '#3 Deluxe Version',
+    duration:240},
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.bJHlzlWGzeYECwPHWA_XKQHaHa%26pid%3DApi&f=1',
+    title:'Wolves',
+    author:'Selena Gomez/Marshmello',
+    album: 'Wolves',
+    duration:282},
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.-rWyFQ4FWhRWPyniBuXT_QHaHa%26pid%3DApi&f=1',
+    title:'No brand girls',
+    author:'μ\'s',
+    album: '',
+    duration:224},
+    {url:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.0I9QQp_DUCtroecU1wkQcQHaHa%26pid%3DApi&f=1',
+    title:'FIRE BIRD',
+    author:'Roselia',
+    album: 'FIRE BIRD',
+    duration:260},
+
 ]
